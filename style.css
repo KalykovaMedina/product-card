@@ -17,6 +17,7 @@ body {
   background-size: 790px auto;
   background-position: left top;
 }
+
 .title {
   font-size: 70px;
   font-weight: 400;
@@ -28,7 +29,7 @@ body {
 }
 
 .products-list {
-  list-style:none ;
+  list-style-type:none ;
   padding: 0;
   margin: 0 auto; 
   display: flex;
@@ -63,6 +64,7 @@ body {
   margin-bottom: 5px;
   margin-top: 5px;
 }
+
 .product-name__title {
   font-size: 25px;
   margin: 0 0 8px 0;
@@ -141,7 +143,7 @@ body {
   width: 340px;
 }
 
-.product-tag--text {
+.product-tag__text {
   color: #a26ac9bb;
 }
 
