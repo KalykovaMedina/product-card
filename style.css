@@ -50,7 +50,7 @@ body {
   margin-bottom: 30px;
 }
 
-.product-tag {
+.product-card__text {
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
@@ -58,14 +58,14 @@ body {
   color: #A5A3B9;
 }
 
-.product-name {
+.product-card__title {
   font-size: 20px;
   line-height: 27px;
   margin-bottom: 5px;
   margin-top: 5px;
 }
 
-.product-name__title {
+.product-card__title--active {
   font-size: 25px;
   margin: 0 0 8px 0;
   color: #9e63c8bb;
@@ -84,7 +84,7 @@ body {
   line-height: 18px;
 } 
 
-.product-price {
+.product-card__price {
   font-size: 20px;
   line-height: 24px;
   margin-top: 25px;
@@ -112,7 +112,7 @@ body {
   font-weight: 600;
 }
 
-.btn-buy {
+.product-card__btn {
   display: block;
   width: 100%;
   background-color: #bcb7e5;
@@ -127,11 +127,11 @@ body {
   margin-top: 25px;
 }
 
-.btn-buy:hover {
+.product-card__btn:hover {
   background-color: #837bc8;
 }
 
-.btn-buy:active {
+.product-card__btn:active {
   background-color: #645eb8;
 }
 
@@ -143,19 +143,19 @@ body {
   width: 340px;
 }
 
-.product-tag__text {
+.product-card__text--active {
   color: #a26ac9bb;
 }
 
-.btn-buy--active{
+.product-card__btn--active {
   background-color:#a26ac9bb;
 }
 
-.btn-buy--active:hover {
+.product-card__btn--active:hover {
   background-color: #924dc4bb;
 }
 
-.btn-buy--active:active {
+.product-card__btn--active:active {
   background-color: #8937c4bb;
 }
 
