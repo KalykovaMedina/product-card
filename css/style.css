@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif; 
+  font-size: 13px;
+  color:#515076 ;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.clear-list {
+  list-style-type:none ;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,104 @@
+.card {
+  background-color:#F7F7FA;
+  padding: 25px;
+  width: 100%; 
+}
+
+.card__image {
+  width: 290px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.card__category {
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #A5A3B9;
+}
+
+.card__name {
+  font-size: 20px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.card__name--active {
+  font-size: 25px;
+  margin: 0 0 8px 0;
+  color: #9e63c8bb;
+}
+
+.card-description {
+  font-size: 13px;
+  line-height: 18px;
+  width: 287px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.card__price {
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+} 
+.card__btn {
+  display: block;
+  width: 100%;
+  background-color: #bcb7e5;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  margin-top: 25px;
+}
+
+.card__btn:hover {
+  background-color: #837bc8;
+}
+
+.card__btn:active {
+  background-color: #645eb8;
+}
+
+.card__category--active {
+  color: #a26ac9bb;
+}
+
+.card__btn--active {
+  background-color:#a26ac9bb;
+}
+
+.card__btn--active:hover {
+  background-color: #924dc4bb;
+}
+
+.card__btn--active:active {
+  background-color: #8937c4bb;
+}
+.card__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 12px 0;
+  
+}
+
+.rating__stars {
+  color: #f5b301;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.rating__value {
+  color:#6b7280;
+  font-size: 19px;
+  font-weight: 600;
+}
