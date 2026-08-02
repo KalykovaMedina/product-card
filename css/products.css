@@ -11,7 +11,7 @@
 }
 
 .products__item--featured {
-  background: #e8daf3; 
+  background: #e8daf3;
   border: 2px solid #e2c9f5;
   color: #a26ac9bb;
   padding: 32px 24px;
@@ -20,6 +20,6 @@
 
 .products__item--featured:hover {
   transform: scale(1.03);
-  background: #e7d1f6; 
+  background: #e7d1f6;
   border: 2px solid #e2c6f6;
 }
