@@ -1,7 +1,7 @@
 .card {
-  background-color:#F7F7FA;
+  background-color: #f7f7fa;
   padding: 25px;
-  width: 100%; 
+  width: 100%;
 }
 
 .card__image {
@@ -15,7 +15,7 @@
   line-height: 24px;
   text-transform: uppercase;
   margin-bottom: 5px;
-  color: #A5A3B9;
+  color: #515076;
 }
 
 .card__name {
@@ -44,7 +44,7 @@
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
-} 
+}
 .card__btn {
   display: block;
   width: 100%;
@@ -73,7 +73,7 @@
 }
 
 .card__btn--active {
-  background-color:#a26ac9bb;
+  background-color: #a26ac9bb;
 }
 
 .card__btn--active:hover {
@@ -88,7 +88,6 @@
   align-items: center;
   gap: 8px;
   margin: 8px 0 12px 0;
-  
 }
 
 .rating__stars {
@@ -98,7 +97,7 @@
 }
 
 .rating__value {
-  color:#6b7280;
+  color: #6b7280;
   font-size: 19px;
   font-weight: 600;
 }
