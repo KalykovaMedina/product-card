@@ -24,6 +24,7 @@ carData.owner = myProfile;
 //№5 Функция проверки наличия свойства
 function checkMaxSpeed(car) {
   if (!("maxSpeed" in car)) {
+    //Знак ! означает "НЕ". То есть: "Если maxSpeed не находится в машине...".
     carData.maxSpeed = 200;
   } else {
     return;
