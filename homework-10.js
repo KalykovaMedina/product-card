@@ -37,17 +37,14 @@ const productsDescriptions = products.reduce((acc, product) => {
   return acc;
 }, {});
 
-console.log(productsDescriptions);
-
 function getCardsCount() {
-  const answer = prompt("Сколько карточек отобразить? От 1 до 5");
-  const count = Number(answer);
+  let count;
 
-  if (count >= 1 && count <= 5) {
-    return count;
-  } else {
-    return 5;
+  while (!Number.isInteger(count) || count < 1 || count > 5) {
+    const answer = prompt("Сколько карточек отобразить? От 1 до 5");
+    count = Number(answer);
   }
+  return count;
 }
 
 function renderCards(productsToRender) {
