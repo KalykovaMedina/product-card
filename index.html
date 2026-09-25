@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/catalog.css" />
     <link rel="stylesheet" href="css/card.css" />
     <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,6 +57,47 @@
         </a>
       </div>
     </header>
+    <button class="registration-btn">Регистрация</button>
+    <div class="overlay"></div>
+    <div class="modal">
+      <h2>Регистрация</h2>
+      <button>×</button>
+      <form class="registration-form" novalidate>
+        <label for="name">Имя</label>
+        <input type="text" id="name" required placeholder="Введите ваше имя " />
+        <label for="surname">Фамилия</label>
+        <input
+          type="text"
+          id="surname"
+          required
+          placeholder="Введите фамилию"
+        />
+        <label for="date-birth">Дата рождения</label>
+        <input
+          type="date"
+          id="date-birth"
+          required
+          placeholder="Введите дата рождения"
+        />
+        <label for="login">Логин</label>
+        <input type="text" id="login" required placeholder="Введите логин" />
+        <label for="password">Пароль</label>
+        <input
+          type="password"
+          id="password"
+          required
+          placeholder="Придумайте пароль"
+        />
+        <label for="repeat-password">Повтор пароля</label>
+        <input
+          type="password"
+          id="repeat-password"
+          required
+          placeholder="Повторите пароль"
+        />
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
     <main class="catalog">
       <div class="container catalog__cotainer">
         <h1 class="title catalog__title">Выбери свой продукт</h1>
@@ -225,10 +268,56 @@
         </ul>
       </div>
     </main>
+    <footer class="footer">
+      <div class="footer__info">
+        <h2>Product Cards</h2>
+        <p>У нас самые лучшие продукты для кожи!</p>
+        <div class="footer__socials">
+          <a href="#">
+            <img src="images/Vector.png" alt="Telegram" />
+          </a>
+          <a href="#">
+            <img src="images/VectorVK.png" alt="VK" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__subscribe">
+        <h3>Подпишись на наши акции:</h3>
+        <form class="subscription-form">
+          <label for="email"></label>
+          <div class="subscription-form__input">
+            <input
+              id="email"
+              type="email"
+              required
+              placeholder="Введи Email..."
+            />
+            <button type="submit">Подписаться</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer__links">
+        <h3>Быстрые ссылки</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__copyright">
+        <p>www.product-cards.com©all right reserve</p>
+      </div>
+    </footer>
     <script src="main.js"></script>
     <script src="homework-7.js"></script>
     <script src="homework-8.js"></script>
     <script src="homework-9.js" type="module"></script>
     <script src="homework-10.js" type="module"></script>
+    <script src="homework-11.js"></script>
   </body>
 </html>
