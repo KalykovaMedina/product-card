@@ -1,0 +1,125 @@
+.footer {
+  background: #3a3a3a;
+  color: white;
+  padding: 35px 40px 20px;
+  display: grid; /*распологает элементы footer по сетке */
+  grid-template-columns: 1fr 1.5fr 1fr; /* создает 3 основные колонки */
+  gap: 50px;
+  margin-top: 45px;
+}
+
+.footer h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.footer h3 {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.footer__socials img {
+  width: 18px;
+  height: 18px;
+}
+.subscription-form__input {
+  display: flex; /* распологает input и кнопку рядом*/
+  align-items: center; /* Выравнивает элементы по вертикали по центру*/
+  width: 477px;
+  height: 64px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  overflow: hidden; /* всё, что выходит за границы этого элемента, скрывается.*/
+  width: 477px;
+  height: 61px;
+}
+
+.subscription-form__input input {
+  flex: 1; /* input занимает всё свободное место, которое осталось.*/
+  height: 100%;
+  padding: 0 16px;
+  border: none;
+  outline: none; /* убирает стандартный контур при фокусе*/
+  font-size: 16px;
+}
+
+.subscription-form__input button {
+  height: 32px;
+  padding: 0 20px;
+  background: white;
+  border: none;
+  border-left: 1px solid black; /* отвечает за линию */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.footer__links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__links li {
+  margin-bottom: 8px;
+}
+
+.footer__links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer__links h3 {
+  font-size: 20px;
+}
+
+.footer__copyright {
+  grid-column: 1 / -1; /* занимает все колонки */
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer__subscribe {
+  display: flex;
+  flex-direction: column; /* */
+  align-items: center;
+}
+
+.footer__subscribe h3 {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+.subscription-form__input input {
+  flex: 1; /* */
+  height: 100%;
+  padding: 0 16px;
+  border: none;
+  outline: none; /* */
+  font-size: 16px;
+}
+
+.subscription-form__input button {
+  height: 32px;
+  padding: 0 20px;
+  background: white;
+  border: none;
+  border-left: 1px solid black; /* */
+  font-size: 16px;
+  cursor: pointer;
+}
