@@ -78,8 +78,7 @@
   cursor: pointer;
 }
 
-.modal > button {
-  /* > означает выбрать кнопку, которая является непосредственным ребёнком .modal. */
+.modal__close {
   position: absolute;
 
   top: 12px;

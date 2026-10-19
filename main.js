@@ -1,3 +1,37 @@
+import "./homework-7.js";
+import "./homework-8.js";
+import "./homework-9.js";
+import "./homework-10.js";
+
+import { CreamyDessert } from "./Dessert.js";
+const dessert = new CreamyDessert("Наполеон", "с ягодами", "заварной ");
+dessert.showDessert();
+
+import { Modal } from "./Modal.js";
+const modal = new Modal("registration-modal");
+const openBtn = document.querySelector(".registration-btn");
+openBtn.addEventListener("click", () => modal.open());
+modal.isOpen();
+
+import { Form } from "./Form.js";
+const form = new Form("registration-form");
+form.element.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (form.isValid()) {
+    const data = form.getValues();
+    if (data.password !== data["repeat-password"]) {
+      console.log("Пароли не совпадают!");
+      return;
+    }
+    console.log("Успех!", data);
+    form.reset();
+    modal.close();
+  } else {
+    form.element.reportValidity();
+    console.log("Заполните все поля корректно!");
+  }
+});
+
 //Покраска всех карточек
 const productCards = document.querySelectorAll(".card"); //массив
 const changeColorCardButton = document.querySelector("#change-all-color-btn");
