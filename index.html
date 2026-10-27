@@ -58,15 +58,22 @@
       </div>
     </header>
     <button class="registration-btn">Регистрация</button>
-    <div class="overlay"></div>
-    <div class="modal">
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="registration-modal">
       <h2>Регистрация</h2>
-      <button>×</button>
-      <form class="registration-form" novalidate>
+      <button class="modal__close">×</button>
+      <form class="registration-form" id="registration-form" novalidate>
         <label for="name">Имя</label>
-        <input type="text" id="name" required placeholder="Введите ваше имя " />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Введите ваше имя "
+        />
         <label for="surname">Фамилия</label>
         <input
+          name="surname"
           type="text"
           id="surname"
           required
@@ -74,15 +81,23 @@
         />
         <label for="date-birth">Дата рождения</label>
         <input
+          name="date-birth"
           type="date"
           id="date-birth"
           required
           placeholder="Введите дата рождения"
         />
         <label for="login">Логин</label>
-        <input type="text" id="login" required placeholder="Введите логин" />
+        <input
+          name="login"
+          type="text"
+          id="login"
+          required
+          placeholder="Введите логин"
+        />
         <label for="password">Пароль</label>
         <input
+          name="password"
           type="password"
           id="password"
           required
@@ -90,6 +105,7 @@
         />
         <label for="repeat-password">Повтор пароля</label>
         <input
+          name="repeat-password"
           type="password"
           id="repeat-password"
           required
@@ -313,11 +329,6 @@
         <p>www.product-cards.com©all right reserve</p>
       </div>
     </footer>
-    <script src="main.js"></script>
-    <script src="homework-7.js"></script>
-    <script src="homework-8.js"></script>
-    <script src="homework-9.js" type="module"></script>
-    <script src="homework-10.js" type="module"></script>
-    <script src="homework-11.js"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>

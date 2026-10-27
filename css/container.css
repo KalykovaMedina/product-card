@@ -1,0 +1,8 @@
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  background-image: url(/images/bg_1.png);
+  background-repeat: no-repeat;
+  background-size: 790px auto;
+  background-position: left top;
+}
