@@ -3,11 +3,16 @@ import "./homework-8.js";
 import "./homework-9.js";
 import "./homework-10.js";
 
+import { Cafe } from "./cafe/Cafe.js";
+import { Coffee } from "./cafe/Coffee.js";
+import { Lemonade } from "./cafe/Lemonade.js";
+import { Tea } from "./cafe/Tea.js";
+
 import { CreamyDessert } from "./Dessert.js";
+import { Modal } from "./Modal.js";
 const dessert = new CreamyDessert("Наполеон", "с ягодами", "заварной ");
 dessert.showDessert();
 
-import { Modal } from "./Modal.js";
 const modal = new Modal("registration-modal");
 const openBtn = document.querySelector(".registration-btn");
 openBtn.addEventListener("click", () => modal.open());
@@ -87,3 +92,22 @@ const changeColorButton = document.querySelector("#change-color-btn");
 changeColorButton.addEventListener("click", () => {
   changeColorButton.classList.toggle("active-color");
 });
+
+const coffeeHouse = new Cafe("CoffeHouse", "Москва");
+const coffee = new Coffee("Капучино", "Средний", 250, 60, "Арабика");
+const tea = new Tea("Зелёный чай", "Большой", 180, 80, "Зелёный");
+const lemonade = new Lemonade(
+  "Клубничный лимонад",
+  "Средний",
+  220,
+  5,
+  "Клубника",
+);
+coffeeHouse.orderDrink(coffee);
+coffeeHouse.orderDrink(tea);
+coffeeHouse.orderDrink(lemonade);
+console.log(coffee.getInfo());
+console.log(coffeeHouse.getInfo());
+console.log(coffee.getTemperature());
+console.log(coffee.setTemperature(65));
+console.log(coffee.getTemperature());
