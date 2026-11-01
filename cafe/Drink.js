@@ -23,11 +23,18 @@ export class Drink {
       temperature: this.#temperature,
     };
   }
-  prepare() {
+  #prepare() {
     console.log("Напиток готовится...");
+    if (this.name === "Капучино") {
+      this.setTemperature(65);
+    } else if (this.name === "Зелёный чай") {
+      this.setTemperature(75);
+    } else if (this.name === "Клубничный лимонад") {
+      this.setTemperature(5);
+    }
   }
   serve() {
-    this.prepare();
+    this.#prepare();
     console.log("Напиток подан!");
   }
 }

@@ -5,7 +5,10 @@ export class Tea extends Drink {
     super(name, size, price, temperature);
     this.teaType = teaType;
   }
-  prepare() {
-    console.log("Завариваем чай...");
+  getInfo() {
+    return {
+      ...super.getInfo(),
+      teaType: this.teaType,
+    };
   }
 }

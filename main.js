@@ -106,8 +106,11 @@ const lemonade = new Lemonade(
 coffeeHouse.orderDrink(coffee);
 coffeeHouse.orderDrink(tea);
 coffeeHouse.orderDrink(lemonade);
+console.log(tea.getTemperature());
+console.log(lemonade.getTemperature());
+console.log(coffee.getTemperature());
+
 console.log(coffee.getInfo());
 console.log(coffeeHouse.getInfo());
-console.log(coffee.getTemperature());
-console.log(coffee.setTemperature(65));
-console.log(coffee.getTemperature());
+console.log(tea.getInfo());
+console.log(lemonade.getInfo());

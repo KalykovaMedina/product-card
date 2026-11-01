@@ -5,7 +5,10 @@ export class Lemonade extends Drink {
     super(name, size, price, temperature);
     this.flavor = flavor;
   }
-  prepare() {
-    console.log("Смешиваем ингредиенты для лимонада...");
+  getInfo() {
+    return {
+      ...super.getInfo(),
+      flavor: this.flavor,
+    };
   }
 }

@@ -5,7 +5,10 @@ export class Coffee extends Drink {
     super(name, size, price, temperature);
     this.coffeeType = coffeeType;
   }
-  prepare() {
-    console.log("Готовим кофе...");
+  getInfo() {
+    return {
+      ...super.getInfo(),
+      coffeeType: this.coffeeType,
+    };
   }
 }
