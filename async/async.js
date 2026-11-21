@@ -7,6 +7,13 @@ const savedUsers = localStorage.getItem("users");
 
 function renderUsers(users) {
   userList.innerHTML = "";
+
+  if (users.length === 0) {
+    infoMessages.textContent = "Список пользователей пуст";
+    return;
+  }
+
+  infoMessages.textContent = "";
   users.forEach((user) => {
     const card = document.createElement("div");
     card.classList.add("user-card");
@@ -24,16 +31,17 @@ function renderUsers(users) {
       });
       localStorage.setItem("users", JSON.stringify(updatedUsers));
       renderUsers(updatedUsers);
-      infoMessages.textContent = "Пользователь удалён";
+      if (updatedUsers.length > 0) {
+        infoMessages.textContent = "Пользователь удалён";
+      }
     });
   });
 }
 
-if (savedUsers) {
+if (savedUsers !== null) {
   const users = JSON.parse(savedUsers);
   renderUsers(users);
   console.log(users);
-  infoMessages.textContent = "";
 } else {
   infoMessages.textContent = "Данные загружаются";
   fetch("./users.json")
@@ -44,6 +52,7 @@ if (savedUsers) {
       return response.json();
     })
     .then((data) => {
+      localStorage.setItem("totalUsersCount", data.users.length);
       return new Promise((resolve) => {
         setTimeout(() => {
           resolve(data);
@@ -54,7 +63,6 @@ if (savedUsers) {
       console.log(data);
       localStorage.setItem("users", JSON.stringify(data.users));
       renderUsers(data.users);
-      infoMessages.textContent = "";
     })
     .catch((error) => {
       console.log(error);
@@ -63,8 +71,8 @@ if (savedUsers) {
 }
 
 removeBtn.addEventListener("click", () => {
-  userList.innerHTML = "";
   localStorage.setItem("users", JSON.stringify([]));
+  renderUsers([]);
 });
 
 function loadUsers() {
@@ -76,6 +84,7 @@ function loadUsers() {
       return response.json();
     })
     .then((data) => {
+      localStorage.setItem("totalUsersCount", data.users.length);
       localStorage.setItem("users", JSON.stringify(data.users));
       renderUsers(data.users);
       infoMessages.textContent = "";
@@ -92,7 +101,10 @@ getAllUsersBtn.addEventListener("click", () => {
     const users = JSON.parse(getUsers);
     if (users.length === 0) {
       loadUsers();
-    } else if (userList.children.length === 5) {
+    } else if (
+      userList.children.length ===
+      Number(localStorage.getItem("totalUsersCount"))
+    ) {
       infoMessages.textContent = "Все пользователи уже отображены";
     } else {
       loadUsers();
