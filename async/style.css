@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: Montserrat, sans-serif;
+  background-color: #f3f5fa;
+  color: #252b42;
+  text-align: center;
+}
+.users-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.user-card {
+  padding: 25px;
+  display: flex;
+  background-color: #ffffff;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+  min-height: 160px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.user-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e85d75;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.user-card button:hover {
+  background-color: #d94360;
+  transform: translateY(-2px);
+}
+#btn-remove-all-cards,
+#btn-get-all-users {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btn-remove-all-cards {
+  background-color: #e85d75;
+  color: white;
+}
+
+#btn-get-all-users {
+  background-color: #6478d3;
+  color: white;
+}
+
+#btn-remove-all-cards:hover {
+  background-color: #d94360;
+  transform: translateY(-2px);
+}
+
+#btn-get-all-users:hover {
+  background-color: #4e62bd;
+  transform: translateY(-2px);
+}
+#btn-remove-all-cards {
+  margin-right: 8px;
+}
